@@ -25,7 +25,16 @@
     </div>
 
     <header class="site-header">
-      <a class="brand" href="/">hgarridoco</a>
+      <a class="brand" href="/">
+        <img
+          class="brand-photo"
+          src="assets/hector.jpg"
+          alt=""
+          width="36"
+          height="36"
+        />
+        <span>hgarridoco</span>
+      </a>
       <nav aria-label="Principal">
         <a href="#perfil">Perfil</a>
         <a href="#experiencia">Experiencia</a>
@@ -38,17 +47,28 @@
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Curriculum · Guadalix de la Sierra, Madrid</p>
-        <h1>Héctor Garrido</h1>
-        <p class="lede">
-          Technology Manager en
-          <a href="https://tecnic.eu" rel="noopener noreferrer">TECNIC Bioprocess Solutions</a>.
-          Más de 10 años en software, arquitectura de sistemas y transformación tecnológica.
-        </p>
-        <div class="cta">
-          <a class="button primary" href="#experiencia">Ver trayectoria</a>
-          <a class="button ghost" href="mailto:hector.garrido.colmenarejo@gmail.com">Contactar</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Curriculum · Guadalix de la Sierra, Madrid</p>
+          <h1>Héctor Garrido</h1>
+          <p class="lede">
+            Technology Manager en
+            <a href="https://tecnic.eu" rel="noopener noreferrer">TECNIC Bioprocess Solutions</a>.
+            Más de 10 años en software, arquitectura de sistemas y transformación tecnológica.
+          </p>
+          <div class="cta">
+            <a class="button primary" href="#experiencia">Ver trayectoria</a>
+            <a class="button ghost" href="mailto:hector.garrido.colmenarejo@gmail.com">Contactar</a>
+          </div>
         </div>
+        <figure class="hero-portrait">
+          <img
+            src="assets/hector.jpg"
+            alt="Retrato de Héctor Garrido Colmenarejo"
+            width="800"
+            height="800"
+            fetchpriority="high"
+          />
+        </figure>
       </section>
 
       <section id="perfil" class="section">
@@ -62,23 +82,36 @@
           </p>
         </div>
         <div class="profile-grid">
-          <article class="profile-block">
-            <h3>Enfoque</h3>
-            <p>
-              Resolver problemas complejos, diseñar soluciones escalables e integrar tecnología
-              en procesos de negocio. Experiencia dirigiendo equipos técnicos, estrategia
-              tecnológica e I+D, con responsabilidad sobre infraestructura, seguridad, servidores
-              y evolución tecnológica.
-            </p>
-          </article>
-          <article class="profile-block">
-            <h3>Modalidad</h3>
-            <p>
-              Trayectoria con fuerte componente remoto en Aselcis, GARCO, Ideas Positivas y
-              TECNIC: liderazgo distribuido, entrega continua y cercanía con negocio sin
-              depender de la presencialidad.
-            </p>
-          </article>
+          <div class="profile-main">
+            <figure class="profile-portrait">
+              <img
+                src="assets/hector.jpg"
+                alt="Héctor Garrido Colmenarejo"
+                width="320"
+                height="320"
+                loading="lazy"
+              />
+            </figure>
+            <div class="profile-copy">
+              <article class="profile-block">
+                <h3>Enfoque</h3>
+                <p>
+                  Resolver problemas complejos, diseñar soluciones escalables e integrar
+                  tecnología en procesos de negocio. Experiencia dirigiendo equipos técnicos,
+                  estrategia tecnológica e I+D, con responsabilidad sobre infraestructura,
+                  seguridad, servidores y evolución tecnológica.
+                </p>
+              </article>
+              <article class="profile-block">
+                <h3>Modalidad</h3>
+                <p>
+                  Trayectoria con fuerte componente remoto en Aselcis, GARCO, Ideas Positivas y
+                  TECNIC: liderazgo distribuido, entrega continua y cercanía con negocio sin
+                  depender de la presencialidad.
+                </p>
+              </article>
+            </div>
+          </div>
           <aside class="facts" aria-label="Datos clave">
             <div>
               <span class="fact-label">Rol actual</span>
