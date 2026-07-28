@@ -355,6 +355,13 @@ h1 {
   line-height: 1.4;
 }
 
+.job-loc {
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
 .job-body ul {
   margin: 1rem 0 0;
   padding: 0 0 0 1.1rem;
@@ -395,14 +402,31 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
-.project:hover,
-.project:focus-visible {
+.project:not(.project-static):hover,
+.project:not(.project-static):focus-visible {
   padding-left: 0.45rem;
 }
 
-.project:hover h3,
-.project:focus-visible h3 {
+.project:not(.project-static):hover h3,
+.project:not(.project-static):focus-visible h3 {
   color: var(--accent);
+}
+
+.project-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.badge {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .project-meta {
@@ -411,6 +435,25 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.lang-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: clamp(2rem, 5vw, 2.75rem);
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.lang-row strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.education .job:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
 .section-contact .contact-row {
@@ -475,7 +518,8 @@ h1 {
 @media (max-width: 860px) {
   .profile-grid,
   .skills,
-  .job {
+  .job,
+  .lang-row {
     grid-template-columns: 1fr;
   }
 
