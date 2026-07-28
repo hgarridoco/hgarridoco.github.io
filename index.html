@@ -9,10 +9,33 @@
       content="Curriculum de Héctor Garrido Colmenarejo — Technology Manager en TECNIC Bioprocess Solutions. ERP Odoo, Python e integraciones."
     />
     <meta name="theme-color" content="#0b1c24" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://hgarridoco.github.io/" />
+    <meta property="og:title" content="Héctor Garrido Colmenarejo · Curriculum" />
+    <meta
+      property="og:description"
+      content="Technology Manager en TECNIC. Software, Odoo, APIs e infraestructura."
+    />
+    <meta property="og:image" content="https://hgarridoco.github.io/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Héctor Garrido Colmenarejo · Curriculum" />
+    <meta
+      name="twitter:description"
+      content="Technology Manager en TECNIC. Software, Odoo, APIs e infraestructura."
+    />
+    <meta name="twitter:image" content="https://hgarridoco.github.io/assets/og-image.jpg" />
+    <link rel="canonical" href="https://hgarridoco.github.io/" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script>
+      try {
+        var t = localStorage.getItem("hg-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,22 +53,19 @@
 
     <header class="site-header">
       <a class="brand" href="/">
-        <img
-          class="brand-photo"
-          src="assets/hector-sm.jpg"
-          alt=""
-          width="36"
-          height="36"
-        />
+        <img class="brand-photo" src="assets/hector-sm.jpg" alt="" width="36" height="36" />
         <span>hgarridoco</span>
       </a>
       <nav aria-label="Principal">
-        <a href="#perfil">Perfil</a>
+        <a href="#ahora">Ahora</a>
         <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#competencias">Competencias</a>
-        <a href="#formacion">Formación</a>
+        <a href="#casos">Casos</a>
+        <a href="#competencias">Skills</a>
+        <a href="blog/">Notas</a>
         <a href="#contacto">Contacto</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">
+          <span data-theme-label>Claro</span>
+        </button>
       </nav>
     </header>
 
@@ -60,8 +80,15 @@
             Más de 10 años en software, arquitectura de sistemas y transformación tecnológica.
           </p>
           <div class="cta">
-            <a class="button primary" href="#experiencia">Ver trayectoria</a>
-            <a class="button ghost" href="mailto:hector.garrido.colmenarejo@gmail.com">Contactar</a>
+            <a class="button primary" href="assets/Hector-Garrido-CV.pdf" download>Descargar CV</a>
+            <a class="button ghost" href="#experiencia">Ver trayectoria</a>
+            <button
+              type="button"
+              class="button ghost"
+              data-copy-email="hector.garrido.colmenarejo@gmail.com"
+            >
+              <span data-copy-label>Copiar email</span>
+            </button>
           </div>
         </div>
         <figure class="hero-portrait">
@@ -78,9 +105,69 @@
         </figure>
       </section>
 
-      <section id="perfil" class="section">
+      <section id="logros" class="section reveal">
         <div class="section-head">
           <p class="section-kicker">01</p>
+          <h2>Impacto</h2>
+          <p class="section-lede">Resultados que resumen la trayectoria mejor que un listado de herramientas.</p>
+        </div>
+        <div class="stats">
+          <article>
+            <p class="stat-value">−60%</p>
+            <p class="stat-label">Reducción de costes operativos en proyectos de optimización ERP medidos</p>
+          </article>
+          <article>
+            <p class="stat-value">10+</p>
+            <p class="stat-label">Años construyendo software, integraciones e infraestructura</p>
+          </article>
+          <article>
+            <p class="stat-value">4</p>
+            <p class="stat-label">Años liderando GARCO como CEO antes de la integración en Ideas Positivas</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ahora" class="section reveal">
+        <div class="section-head">
+          <p class="section-kicker">02</p>
+          <h2>Ahora mismo</h2>
+          <p class="section-lede">
+            Lo que ocupa mi día a día hoy, más allá del título del puesto.
+          </p>
+        </div>
+        <div class="now-grid">
+          <div class="now-copy">
+            <p>
+              En TECNIC lidero la estrategia tecnológica e I+D: software propio, integraciones
+              (incluido Odoo), infraestructura y seguridad para un fabricante de equipos de
+              bioprocess. El foco está en sistemas estables, trazables y útiles de verdad para
+              ingeniería y operaciones.
+            </p>
+            <p>
+              También me interesa seguir afinando cómo se despliega y opera tecnología remota:
+              menos fricción entre desarrollo y producción, más automatización y equipos que
+              puedan crecer sin perder calidad.
+            </p>
+          </div>
+          <figure class="now-photo">
+            <picture>
+              <source srcset="assets/hector.webp" type="image/webp" />
+              <img
+                src="assets/hector.jpg"
+                alt="Héctor Garrido"
+                width="900"
+                height="900"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption>Guadalix de la Sierra · trabajo remoto con equipos distribuidos</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="perfil" class="section reveal">
+        <div class="section-head">
+          <p class="section-kicker">03</p>
           <h2>Perfil</h2>
           <p class="section-lede">
             Especializado en ERP (Odoo), integraciones mediante APIs y desarrollo backend con
@@ -93,10 +180,10 @@
             <article class="profile-block">
               <h3>Enfoque</h3>
               <p>
-                Resolver problemas complejos, diseñar soluciones escalables e integrar
-                tecnología en procesos de negocio. Experiencia dirigiendo equipos técnicos,
-                estrategia tecnológica e I+D, con responsabilidad sobre infraestructura,
-                seguridad, servidores y evolución tecnológica.
+                Resolver problemas complejos, diseñar soluciones escalables e integrar tecnología
+                en procesos de negocio. Experiencia dirigiendo equipos técnicos, estrategia
+                tecnológica e I+D, con responsabilidad sobre infraestructura, seguridad, servidores
+                y evolución tecnológica.
               </p>
             </article>
             <article class="profile-block">
@@ -129,15 +216,14 @@
         </div>
       </section>
 
-      <section id="experiencia" class="section">
+      <section id="experiencia" class="section reveal">
         <div class="section-head">
-          <p class="section-kicker">02</p>
+          <p class="section-kicker">04</p>
           <h2>Experiencia</h2>
           <p class="section-lede">
             De Dynamics NAV y Odoo a la dirección tecnológica e I+D en biotecnología.
           </p>
         </div>
-
         <ol class="timeline">
           <li class="job">
             <div class="job-meta">
@@ -168,7 +254,6 @@
               </ul>
             </div>
           </li>
-
           <li class="job">
             <div class="job-meta">
               <span class="job-period">01/2024 — 12/2024</span>
@@ -193,7 +278,6 @@
               </ul>
             </div>
           </li>
-
           <li class="job">
             <div class="job-meta">
               <span class="job-period">07/2019 — 01/2024</span>
@@ -222,7 +306,6 @@
               </ul>
             </div>
           </li>
-
           <li class="job">
             <div class="job-meta">
               <span class="job-period">01/2019 — 07/2019</span>
@@ -242,7 +325,6 @@
               </ul>
             </div>
           </li>
-
           <li class="job">
             <div class="job-meta">
               <span class="job-period">06/2016 — 12/2018</span>
@@ -265,268 +347,197 @@
         </ol>
       </section>
 
-      <section id="proyectos" class="section">
+      <section id="casos" class="section reveal">
         <div class="section-head">
-          <p class="section-kicker">03</p>
-          <h2>Proyectos</h2>
+          <p class="section-kicker">05</p>
+          <h2>Casos</h2>
           <p class="section-lede">
-            Una parte del trabajo es privada por confidencialidad y protección de datos.
-            Aquí se describe el tipo de desarrollo realizado, sin clientes ni datos sensibles.
+            Historias reales de desarrollo, descritas sin clientes ni datos personales protegidos.
           </p>
         </div>
-
-        <div class="projects">
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Plataforma tecnológica para bioprocesos</h3>
-              <span class="badge">Privado · TECNIC</span>
+        <div class="cases">
+          <article class="case">
+            <p class="case-kicker">Rescate ERP</p>
+            <h3>Reconstruir un Odoo que ya no sostenía el negocio</h3>
+            <div class="case-steps">
+              <div>
+                <h4>Reto</h4>
+                <p>
+                  Entorno degradado tras años de parches: procesos rotos, deuda técnica y costes
+                  de operación disparados.
+                </p>
+              </div>
+              <div>
+                <h4>Solución</h4>
+                <p>
+                  Auditoría de arquitectura, saneamiento de módulos críticos, reconstrucción de
+                  flujos y automatización de lo repetible.
+                </p>
+              </div>
+              <div>
+                <h4>Resultado</h4>
+                <p>
+                  Estabilidad recuperada y reducción de costes operativos superior al 60&nbsp;% en
+                  el alcance medido.
+                </p>
+              </div>
             </div>
-            <p>
-              Diseño y evolución de software e integraciones orientadas a equipos y procesos de
-              bioprocess: sincronización entre sistemas, mantenimiento de versiones y
-              automatización de flujos operativos, con foco en estabilidad y trazabilidad.
-            </p>
-            <span class="project-meta">I+D · Integraciones · Infraestructura</span>
           </article>
-
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Recuperación y optimización de ERPs empresariales</h3>
-              <span class="badge">Privado · Consultoría</span>
+          <article class="case">
+            <p class="case-kicker">Integraciones</p>
+            <h3>Conectar ERP, herramientas especializadas y APIs</h3>
+            <div class="case-steps">
+              <div>
+                <h4>Reto</h4>
+                <p>
+                  Datos repartidos entre sistemas: dobles entradas, errores manuales y poca
+                  trazabilidad entre áreas.
+                </p>
+              </div>
+              <div>
+                <h4>Solución</h4>
+                <p>
+                  Conectores backend en Python, contratos API claros y sincronización de maestros
+                  y documentos sin exponer información sensible.
+                </p>
+              </div>
+              <div>
+                <h4>Resultado</h4>
+                <p>
+                  Menos fricción operativa, menos trabajo manual y una base mantenible para nuevas
+                  integraciones.
+                </p>
+              </div>
             </div>
-            <p>
-              Proyectos de rescate y reestructuración de entornos Odoo degradados o incompletos:
-              saneamiento de arquitectura, reconstrucción de procesos críticos y mejora de
-              rendimiento, con reducciones de coste operativo superiores al 60&nbsp;% en casos
-              medidos.
-            </p>
-            <span class="project-meta">Odoo · Arquitectura · Optimización</span>
           </article>
-
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Integraciones API entre sistemas de negocio</h3>
-              <span class="badge">Privado · Multi-cliente</span>
+          <article class="case">
+            <p class="case-kicker">Bioprocess</p>
+            <h3>Plataforma tecnológica para equipos e I+D</h3>
+            <div class="case-steps">
+              <div>
+                <h4>Reto</h4>
+                <p>
+                  Un fabricante industrial necesita software e infraestructura alineados con
+                  calidad, versiones y operación diaria.
+                </p>
+              </div>
+              <div>
+                <h4>Solución</h4>
+                <p>
+                  Estrategia tecnológica integral: desarrollo, integraciones, despliegues y
+                  supervisión de servidores/seguridad.
+                </p>
+              </div>
+              <div>
+                <h4>Resultado</h4>
+                <p>
+                  Evolución continua del ecosistema digital con foco en estabilidad y adopción
+                  interna.
+                </p>
+              </div>
             </div>
-            <p>
-              Desarrollo de conectores e integraciones vía API entre ERP, herramientas
-              especializadas y servicios externos: sincronización de maestros, automatización de
-              documentos y eliminación de dobles entradas, sin exponer datos de terceros.
-            </p>
-            <span class="project-meta">Python · APIs · Backend</span>
-          </article>
-
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Personalización profunda de Odoo</h3>
-              <span class="badge">Privado · Producto a medida</span>
-            </div>
-            <p>
-              Módulos y flujos a medida sobre ventas, operaciones, helpdesk, contratos y
-              reporting: modelado de procesos reales de cada organización, formación a usuarios y
-              puesta en marcha controlada.
-            </p>
-            <span class="project-meta">Odoo · Python · Consultoría</span>
-          </article>
-
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Migraciones y continuidad en Dynamics NAV</h3>
-              <span class="badge">Privado · NubIT</span>
-            </div>
-            <p>
-              Mantenimiento evolutivo, personalizaciones y migraciones entre versiones de
-              Microsoft Dynamics NAV, con resolución de incidencias críticas para asegurar
-              continuidad operativa en entornos productivos.
-            </p>
-            <span class="project-meta">Dynamics NAV · Soporte · Migración</span>
-          </article>
-
-          <article class="project project-static">
-            <div class="project-top">
-              <h3>Despliegue y operación de entornos Odoo</h3>
-              <span class="badge">Público / interno</span>
-            </div>
-            <p>
-              Automatización de despliegues y estandarización de entornos (incl. Docker) para
-              acelerar entregas de consultoría y reducir fricción entre desarrollo, pruebas y
-              producción.
-            </p>
-            <span class="project-meta">Docker · DevOps · Odoo</span>
           </article>
         </div>
       </section>
 
-      <section id="competencias" class="section">
+      <section id="proyectos" class="section reveal">
         <div class="section-head">
-          <p class="section-kicker">04</p>
+          <p class="section-kicker">06</p>
+          <h2>Más proyectos</h2>
+          <p class="section-lede">Otras líneas de trabajo, públicas o privadas a alto nivel.</p>
+        </div>
+        <div class="projects">
+          <article class="project project-static">
+            <div class="project-top">
+              <h3>Personalización profunda de Odoo</h3>
+              <span class="badge">Privado</span>
+            </div>
+            <p>
+              Módulos y flujos a medida sobre ventas, operaciones, helpdesk, contratos y
+              reporting, con formación y puesta en marcha controlada.
+            </p>
+            <span class="project-meta">Odoo · Python · Consultoría</span>
+          </article>
+          <article class="project project-static">
+            <div class="project-top">
+              <h3>Migraciones Dynamics NAV</h3>
+              <span class="badge">Privado</span>
+            </div>
+            <p>
+              Mantenimiento evolutivo y migraciones entre versiones con continuidad operativa en
+              entornos productivos.
+            </p>
+            <span class="project-meta">Dynamics NAV · Soporte</span>
+          </article>
+          <article class="project project-static">
+            <div class="project-top">
+              <h3>Despliegue de entornos Odoo</h3>
+              <span class="badge">DevOps</span>
+            </div>
+            <p>
+              Automatización con Docker y estandarización de entornos para acortar el camino entre
+              desarrollo, pruebas y producción.
+            </p>
+            <span class="project-meta">Docker · Linux · Nginx</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="competencias" class="section reveal">
+        <div class="section-head">
+          <p class="section-kicker">07</p>
           <h2>Competencias</h2>
           <p class="section-lede">
             Stack técnico y capacidades de liderazgo que uso de forma habitual.
           </p>
         </div>
-
+        <div class="stack-row" aria-label="Stack visual">
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Python</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Odoo</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>PostgreSQL</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Docker</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>APIs</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Linux</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Git</span>
+          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Nginx</span>
+        </div>
         <div class="skill-groups" data-skill-meters>
           <div class="skill-group">
             <h3>Lenguajes</h3>
             <ul class="meters" role="list">
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Python</span>
-                  <span class="meter-value">95%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 95%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>JavaScript</span>
-                  <span class="meter-value">85%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 85%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>SQL</span>
-                  <span class="meter-value">90%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 90%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>HTML / CSS</span>
-                  <span class="meter-value">92%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 92%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Bash</span>
-                  <span class="meter-value">90%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 90%"></div>
-                </div>
-              </li>
+              <li class="meter"><div class="meter-top"><span>Python</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>JavaScript</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>SQL</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>HTML / CSS</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>Bash</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
             </ul>
           </div>
-
           <div class="skill-group">
             <h3>Plataformas &amp; datos</h3>
             <ul class="meters" role="list">
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Odoo</span>
-                  <span class="meter-value">98%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 98%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Dynamics NAV</span>
-                  <span class="meter-value">85%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 85%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>PostgreSQL</span>
-                  <span class="meter-value">92%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 92%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>APIs / integraciones</span>
-                  <span class="meter-value">93%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 93%"></div>
-                </div>
-              </li>
+              <li class="meter"><div class="meter-top"><span>Odoo</span><span class="meter-value">98%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 98%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>Dynamics NAV</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>PostgreSQL</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>APIs / integraciones</span><span class="meter-value">93%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 93%"></div></div></li>
             </ul>
           </div>
-
           <div class="skill-group">
             <h3>Infra &amp; DevOps</h3>
             <ul class="meters" role="list">
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Git</span>
-                  <span class="meter-value">95%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 95%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Linux</span>
-                  <span class="meter-value">95%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 95%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Docker</span>
-                  <span class="meter-value">92%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 92%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Nginx</span>
-                  <span class="meter-value">85%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 85%"></div>
-                </div>
-              </li>
-              <li class="meter">
-                <div class="meter-top">
-                  <span>GitHub Actions</span>
-                  <span class="meter-value">80%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 80%"></div>
-                </div>
-              </li>
+              <li class="meter"><div class="meter-top"><span>Git</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>Linux</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>Docker</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>Nginx</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span>GitHub Actions</span><span class="meter-value">80%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 80%"></div></div></li>
             </ul>
           </div>
-
           <div class="skill-group skill-group-wide">
             <h3>Liderazgo</h3>
             <ul class="meters" role="list">
-              <li class="meter">
-                <div class="meter-top">
-                  <span>Gestión de proyectos y liderazgo técnico</span>
-                  <span class="meter-value">95%</span>
-                </div>
-                <div class="meter-track" aria-hidden="true">
-                  <div class="meter-fill" style="--level: 95%"></div>
-                </div>
-              </li>
+              <li class="meter"><div class="meter-top"><span>Gestión de proyectos y liderazgo técnico</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
             </ul>
           </div>
         </div>
-
         <div class="lang-row" aria-label="Idiomas">
           <div>
             <span class="fact-label">Español</span>
@@ -539,10 +550,11 @@
         </div>
       </section>
 
-      <section id="formacion" class="section">
+      <section id="formacion" class="section reveal">
         <div class="section-head">
-          <p class="section-kicker">05</p>
+          <p class="section-kicker">08</p>
           <h2>Formación</h2>
+          <p class="section-lede">Base académica y aprendizaje continuo aplicado a producto real.</p>
         </div>
         <ol class="timeline education">
           <li class="job">
@@ -565,12 +577,47 @@
               <p>Humanidades y ciencias sociales.</p>
             </div>
           </li>
+          <li class="job">
+            <div class="job-meta">
+              <span class="job-period">Continua</span>
+              <span class="job-place">Autodidacta · práctica profesional</span>
+            </div>
+            <div class="job-body">
+              <h3>Formación continua</h3>
+              <p>
+                Especialización práctica en Odoo, Dynamics NAV, integraciones API, Docker, Linux y
+                operación de sistemas en entornos de consultoría e industria. Sin certificaciones
+                formales publicadas: el aprendizaje ha ido ligado a proyectos reales.
+              </p>
+            </div>
+          </li>
         </ol>
       </section>
 
-      <section id="contacto" class="section section-contact">
+      <section id="notas" class="section reveal">
         <div class="section-head">
-          <p class="section-kicker">06</p>
+          <p class="section-kicker">09</p>
+          <h2>Notas</h2>
+          <p class="section-lede">Apuntes técnicos breves sobre el trabajo del día a día.</p>
+        </div>
+        <div class="notes-list">
+          <a class="note-card" href="blog/rescatar-odoo-degradado.html">
+            <span class="note-date">2026</span>
+            <h3>Cómo enfoco el rescate de un Odoo degradado</h3>
+            <p>Orden de batalla: diagnosticar, estabilizar, reconstruir y automatizar.</p>
+          </a>
+          <a class="note-card" href="blog/integraciones-api-erp.html">
+            <span class="note-date">2026</span>
+            <h3>Integraciones API entre ERP y sistemas de negocio</h3>
+            <p>Contratos claros, idempotencia y menos magia entre aplicaciones.</p>
+          </a>
+        </div>
+        <p class="notes-more"><a href="blog/">Ver todas las notas →</a></p>
+      </section>
+
+      <section id="contacto" class="section section-contact reveal">
+        <div class="section-head">
+          <p class="section-kicker">10</p>
           <h2>Contacto</h2>
           <p class="section-lede">
             Guadalix de la Sierra, Madrid. Abierto a conversaciones sobre tecnología, producto o
@@ -578,17 +625,22 @@
           </p>
         </div>
         <div class="contact-row">
-          <a class="button primary" href="mailto:hector.garrido.colmenarejo@gmail.com">Email</a>
+          <a class="button primary" href="mailto:hector.garrido.colmenarejo@gmail.com">Escribir</a>
+          <button
+            type="button"
+            class="button ghost"
+            data-copy-email="hector.garrido.colmenarejo@gmail.com"
+          >
+            <span data-copy-label>Copiar email</span>
+          </button>
+          <a class="button ghost" href="assets/Hector-Garrido-CV.pdf" download>Descargar CV</a>
           <a
             class="button ghost"
             href="https://www.linkedin.com/in/hector-garrido-colmenarejo"
             rel="noopener noreferrer"
             >LinkedIn</a
           >
-          <a
-            class="button ghost"
-            href="https://github.com/hgarridoco"
-            rel="noopener noreferrer"
+          <a class="button ghost" href="https://github.com/hgarridoco" rel="noopener noreferrer"
             >GitHub</a
           >
         </div>
@@ -600,29 +652,6 @@
       <a href="https://hgarridoco.github.io">hgarridoco.github.io</a>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-
-      const metersRoot = document.querySelector("[data-skill-meters]");
-      if (metersRoot) {
-        const reveal = () => metersRoot.classList.add("is-animated");
-        if ("IntersectionObserver" in window) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  reveal();
-                  observer.disconnect();
-                }
-              });
-            },
-            { threshold: 0.25 }
-          );
-          observer.observe(metersRoot);
-        } else {
-          reveal();
-        }
-      }
-    </script>
+    <script src="site.js" defer></script>
   </body>
 </html>

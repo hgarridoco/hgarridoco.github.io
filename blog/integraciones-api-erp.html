@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Integraciones API entre ERP y negocio · Héctor Garrido</title>
+    <meta
+      name="description"
+      content="Principios prácticos para integrar ERP y sistemas de negocio vía API sin acoplar de más."
+    />
+    <meta name="theme-color" content="#0b1c24" />
+    <meta property="og:title" content="Integraciones API entre ERP y sistemas de negocio" />
+    <meta property="og:image" content="https://hgarridoco.github.io/assets/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script>
+      try {
+        var t = localStorage.getItem("hg-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grid"></div>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img class="brand-photo" src="../assets/hector-sm.jpg" alt="" width="36" height="36" />
+        <span>hgarridoco</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/blog/">Notas</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">
+          <span data-theme-label>Claro</span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <header class="post-hero reveal">
+        <p class="eyebrow">Nota · 2026</p>
+        <h1>Integraciones API entre ERP y sistemas de negocio</h1>
+        <p class="lede">
+          La integración buena no presume de conectores: presume de contratos, reintentos y datos
+          que se pueden explicar.
+        </p>
+      </header>
+      <article class="section prose reveal">
+        <p>
+          En proyectos reales el dolor no suele ser “llamar a una API”. Es decidir qué sistema es
+          maestro, qué pasa cuando falla una sincronización y cómo se audita sin filtrar
+          información sensible.
+        </p>
+        <h2>Contratos antes que código</h2>
+        <ul>
+          <li>Definir campos, ownership y frecuencia de sync.</li>
+          <li>Versionar payloads cuando el consumidor no puede actualizar al mismo ritmo.</li>
+          <li>Documentar errores esperables (timeouts, duplicados, permisos).</li>
+        </ul>
+        <h2>Idempotencia y reintentos</h2>
+        <p>
+          Las redes fallan. Un conector Python entre Odoo y otro servicio debe poder reintentar
+          sin crear duplicados. Eso implica claves de idempotencia, estados claros y logs útiles
+          para soporte.
+        </p>
+        <h2>Menos magia, más operación</h2>
+        <p>
+          Prefiero pipelines aburridos: colas o jobs programados, alertas simples y dashboards
+          mínimos. Si solo funciona “cuando yo estoy online”, no es una integración: es un riesgo.
+        </p>
+        <h2>Privacidad por diseño</h2>
+        <p>
+          En entornos con datos de clientes o de planta, minimizo campos transferidos, separo
+          entornos y evito logs con información personal. El detalle del negocio se resuelve;
+          los datos personales no viajan de más.
+        </p>
+        <p>
+          <a href="/blog/">← Volver a notas</a>
+        </p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Héctor Garrido Colmenarejo</span>
+      <a href="/">Inicio</a>
+    </footer>
+    <script src="../site.js" defer></script>
+  </body>
+</html>

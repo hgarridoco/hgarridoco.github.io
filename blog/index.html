@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notas · Héctor Garrido</title>
+    <meta name="description" content="Apuntes técnicos de Héctor Garrido sobre Odoo, integraciones y operaciones." />
+    <meta name="theme-color" content="#0b1c24" />
+    <meta property="og:title" content="Notas · Héctor Garrido" />
+    <meta property="og:description" content="Apuntes técnicos sobre Odoo, APIs e infraestructura." />
+    <meta property="og:image" content="https://hgarridoco.github.io/assets/og-image.jpg" />
+    <meta property="og:url" content="https://hgarridoco.github.io/blog/" />
+    <link rel="canonical" href="https://hgarridoco.github.io/blog/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script>
+      try {
+        var t = localStorage.getItem("hg-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grid"></div>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img class="brand-photo" src="../assets/hector-sm.jpg" alt="" width="36" height="36" />
+        <span>hgarridoco</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/#casos">Casos</a>
+        <a href="/blog/">Notas</a>
+        <a href="/#contacto">Contacto</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">
+          <span data-theme-label>Claro</span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <header class="post-hero reveal">
+        <p class="eyebrow">Blog</p>
+        <h1>Notas</h1>
+        <p class="lede">Ideas y enfoques del trabajo diario, sin datos sensibles de clientes.</p>
+      </header>
+      <section class="section reveal">
+        <div class="notes-list">
+          <a class="note-card" href="rescatar-odoo-degradado.html">
+            <span class="note-date">2026</span>
+            <h3>Cómo enfoco el rescate de un Odoo degradado</h3>
+            <p>Orden de batalla: diagnosticar, estabilizar, reconstruir y automatizar.</p>
+          </a>
+          <a class="note-card" href="integraciones-api-erp.html">
+            <span class="note-date">2026</span>
+            <h3>Integraciones API entre ERP y sistemas de negocio</h3>
+            <p>Contratos claros, idempotencia y menos magia entre aplicaciones.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Héctor Garrido Colmenarejo</span>
+      <a href="/">Volver al inicio</a>
+    </footer>
+    <script src="../site.js" defer></script>
+  </body>
+</html>
