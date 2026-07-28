@@ -453,7 +453,7 @@ h1 {
 
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(2rem, 4vw, 3rem);
 }
 
@@ -705,6 +705,12 @@ h1 {
     background:
       linear-gradient(180deg, transparent 45%, rgba(7, 18, 24, 0.7) 100%),
       linear-gradient(90deg, rgba(7, 18, 24, 0.2), transparent 45%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .skill-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
