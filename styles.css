@@ -324,10 +324,12 @@ html[data-theme="light"] .button.is-copied {
   background: var(--surface);
   color: var(--ink-muted);
   border-radius: 0.45rem;
-  padding: 0.35rem 0.7rem;
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 600;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
@@ -336,6 +338,19 @@ html[data-theme="light"] .button.is-copied {
 .theme-toggle:focus-visible {
   color: var(--ink);
   border-color: rgba(232, 241, 244, 0.35);
+}
+
+.theme-icon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-icon-sun,
+html:not([data-theme]) .theme-icon-sun {
+  display: block;
+}
+
+html[data-theme="light"] .theme-icon-moon {
+  display: block;
 }
 
 .section {
@@ -702,11 +717,66 @@ html[data-theme="light"] .button.is-copied {
   font-size: 0.95rem;
 }
 
+.meter-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.skill-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: var(--ink);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+  opacity: 0.92;
+}
+
+.stack-chip .skill-icon {
+  background-color: var(--accent);
+}
+
 .now-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: center;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.focus-item {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.focus-num {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.focus-item h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.focus-item p {
+  margin: 0;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
 }
 
 .now-copy p {
@@ -805,14 +875,6 @@ html[data-theme="light"] .button.is-copied {
   background: var(--surface);
   font-size: 0.85rem;
   font-weight: 500;
-}
-
-.stack-dot {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px var(--glow);
 }
 
 .notes-list {
@@ -1001,7 +1063,8 @@ html[data-theme="light"] .button.is-copied {
 
   .now-grid,
   .stats,
-  .case-steps {
+  .case-steps,
+  .focus-grid {
     grid-template-columns: 1fr;
   }
 }

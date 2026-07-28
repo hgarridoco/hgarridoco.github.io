@@ -19,22 +19,22 @@
     } catch {
       /* ignore */
     }
-    const toggle = document.querySelector("[data-theme-toggle]");
-    if (toggle) {
-      const next = theme === "light" ? "dark" : "light";
-      toggle.setAttribute("aria-label", `Activar modo ${next === "light" ? "claro" : "oscuro"}`);
+    document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+      const next = theme === "light" ? "oscuro" : "claro";
+      toggle.setAttribute("aria-label", `Activar modo ${next}`);
       toggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
-      toggle.querySelector("[data-theme-label]").textContent =
-        theme === "light" ? "Oscuro" : "Claro";
-    }
+      toggle.title = `Modo ${next}`;
+    });
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", theme === "light" ? "#eef3f4" : "#0b1c24");
   };
 
   applyTheme(stored === "light" || stored === "dark" ? stored : "dark");
 
-  document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
-    applyTheme(doc.getAttribute("data-theme") === "light" ? "dark" : "light");
+  document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      applyTheme(doc.getAttribute("data-theme") === "light" ? "dark" : "light");
+    });
   });
 
   document.querySelectorAll("[data-copy-email]").forEach((btn) => {
@@ -66,9 +66,6 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
-          if (entry.target === metersRoot || entry.target.contains(metersRoot)) {
-            revealMeters();
-          }
           io.unobserve(entry.target);
         });
       },

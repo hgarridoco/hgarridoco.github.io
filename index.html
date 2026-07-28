@@ -57,14 +57,29 @@
         <span>hgarridoco</span>
       </a>
       <nav aria-label="Principal">
-        <a href="#ahora">Ahora</a>
+        <a href="#foco">Foco</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#casos">Casos</a>
         <a href="#competencias">Skills</a>
         <a href="blog/">Notas</a>
         <a href="#contacto">Contacto</a>
-        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">
-          <span data-theme-label>Claro</span>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" title="Cambiar tema">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+            <circle cx="12" cy="12" r="4" fill="currentColor" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+            <path
+              d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5Z"
+              fill="currentColor"
+            />
+          </svg>
         </button>
       </nav>
     </header>
@@ -127,41 +142,28 @@
         </div>
       </section>
 
-      <section id="ahora" class="section reveal">
+      <section id="foco" class="section reveal">
         <div class="section-head">
           <p class="section-kicker">02</p>
-          <h2>Ahora mismo</h2>
-          <p class="section-lede">
-            Lo que ocupa mi día a día hoy, más allá del título del puesto.
-          </p>
+          <h2>Foco</h2>
+          <p class="section-lede">Tres prioridades que ocupan mi trabajo ahora en TECNIC.</p>
         </div>
-        <div class="now-grid">
-          <div class="now-copy">
-            <p>
-              En TECNIC lidero la estrategia tecnológica e I+D: software propio, integraciones
-              (incluido Odoo), infraestructura y seguridad para un fabricante de equipos de
-              bioprocess. El foco está en sistemas estables, trazables y útiles de verdad para
-              ingeniería y operaciones.
-            </p>
-            <p>
-              También me interesa seguir afinando cómo se despliega y opera tecnología remota:
-              menos fricción entre desarrollo y producción, más automatización y equipos que
-              puedan crecer sin perder calidad.
-            </p>
-          </div>
-          <figure class="now-photo">
-            <picture>
-              <source srcset="assets/hector.webp" type="image/webp" />
-              <img
-                src="assets/hector.jpg"
-                alt="Héctor Garrido"
-                width="900"
-                height="900"
-                loading="lazy"
-              />
-            </picture>
-            <figcaption>Guadalix de la Sierra · trabajo remoto con equipos distribuidos</figcaption>
-          </figure>
+        <div class="focus-grid">
+          <article class="focus-item">
+            <span class="focus-num">01</span>
+            <h3>Estrategia tech &amp; I+D</h3>
+            <p>Definir y ejecutar la evolución tecnológica del negocio de bioprocess.</p>
+          </article>
+          <article class="focus-item">
+            <span class="focus-num">02</span>
+            <h3>Software e integraciones</h3>
+            <p>Odoo, APIs y sistemas internos estables para ingeniería y operaciones.</p>
+          </article>
+          <article class="focus-item">
+            <span class="focus-num">03</span>
+            <h3>Infraestructura remota</h3>
+            <p>Servidores, seguridad y automatización para equipos distribuidos.</p>
+          </article>
         </div>
       </section>
 
@@ -492,49 +494,49 @@
           </p>
         </div>
         <div class="stack-row" aria-label="Stack visual">
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Python</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Odoo</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>PostgreSQL</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Docker</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>APIs</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Linux</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Git</span>
-          <span class="stack-chip"><span class="stack-dot" aria-hidden="true"></span>Nginx</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/python.svg')" aria-hidden="true"></span>Python</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/javascript.svg')" aria-hidden="true"></span>JavaScript</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/odoo.svg')" aria-hidden="true"></span>Odoo</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/postgresql.svg')" aria-hidden="true"></span>PostgreSQL</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/docker.svg')" aria-hidden="true"></span>Docker</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/git.svg')" aria-hidden="true"></span>Git</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/linux.svg')" aria-hidden="true"></span>Linux</span>
+          <span class="stack-chip"><span class="skill-icon" style="--icon: url('assets/icons/nginx.svg')" aria-hidden="true"></span>Nginx</span>
         </div>
         <div class="skill-groups" data-skill-meters>
           <div class="skill-group">
             <h3>Lenguajes</h3>
             <ul class="meters" role="list">
-              <li class="meter"><div class="meter-top"><span>Python</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>JavaScript</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>SQL</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>HTML / CSS</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>Bash</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/python.svg')" aria-hidden="true"></span>Python</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/javascript.svg')" aria-hidden="true"></span>JavaScript</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/sql.svg')" aria-hidden="true"></span>SQL</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/html5.svg')" aria-hidden="true"></span><span class="skill-icon" style="--icon: url('assets/icons/css3.svg')" aria-hidden="true"></span>HTML / CSS</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/gnubash.svg')" aria-hidden="true"></span>Bash</span><span class="meter-value">90%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 90%"></div></div></li>
             </ul>
           </div>
           <div class="skill-group">
             <h3>Plataformas &amp; datos</h3>
             <ul class="meters" role="list">
-              <li class="meter"><div class="meter-top"><span>Odoo</span><span class="meter-value">98%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 98%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>Dynamics NAV</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>PostgreSQL</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>APIs / integraciones</span><span class="meter-value">93%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 93%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/odoo.svg')" aria-hidden="true"></span>Odoo</span><span class="meter-value">98%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 98%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/microsoft.svg')" aria-hidden="true"></span>Dynamics NAV</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/postgresql.svg')" aria-hidden="true"></span>PostgreSQL</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/swagger.svg')" aria-hidden="true"></span>APIs / integraciones</span><span class="meter-value">93%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 93%"></div></div></li>
             </ul>
           </div>
           <div class="skill-group">
             <h3>Infra &amp; DevOps</h3>
             <ul class="meters" role="list">
-              <li class="meter"><div class="meter-top"><span>Git</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>Linux</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>Docker</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>Nginx</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
-              <li class="meter"><div class="meter-top"><span>GitHub Actions</span><span class="meter-value">80%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 80%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/git.svg')" aria-hidden="true"></span>Git</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/linux.svg')" aria-hidden="true"></span>Linux</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/docker.svg')" aria-hidden="true"></span>Docker</span><span class="meter-value">92%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 92%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/nginx.svg')" aria-hidden="true"></span>Nginx</span><span class="meter-value">85%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 85%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name"><span class="skill-icon" style="--icon: url('assets/icons/githubactions.svg')" aria-hidden="true"></span>GitHub Actions</span><span class="meter-value">80%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 80%"></div></div></li>
             </ul>
           </div>
           <div class="skill-group skill-group-wide">
             <h3>Liderazgo</h3>
             <ul class="meters" role="list">
-              <li class="meter"><div class="meter-top"><span>Gestión de proyectos y liderazgo técnico</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
+              <li class="meter"><div class="meter-top"><span class="meter-name">Gestión de proyectos y liderazgo técnico</span><span class="meter-value">95%</span></div><div class="meter-track" aria-hidden="true"><div class="meter-fill" style="--level: 95%"></div></div></li>
             </ul>
           </div>
         </div>
