@@ -362,27 +362,129 @@
           <p class="section-kicker">04</p>
           <h2>Competencias</h2>
           <p class="section-lede">
-            Capacidades técnicas y de liderazgo aplicadas al día a día.
+            Stack técnico y capacidades de liderazgo que uso de forma habitual.
           </p>
         </div>
-        <div class="skills">
-          <article>
-            <h3>ERP &amp; sistemas</h3>
-            <p>Odoo, Microsoft Dynamics NAV, integración de sistemas y optimización de procesos.</p>
-          </article>
-          <article>
-            <h3>Desarrollo</h3>
-            <p>Python, SQL, JavaScript, desarrollo de APIs y backend orientado a negocio.</p>
-          </article>
-          <article>
+
+        <div class="skill-groups" data-skill-meters>
+          <div class="skill-group">
+            <h3>Lenguajes</h3>
+            <ul class="meters" role="list">
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Python</span>
+                  <span class="meter-value">95%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 95%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>JavaScript</span>
+                  <span class="meter-value">85%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 85%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>SQL</span>
+                  <span class="meter-value">90%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 90%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>HTML / CSS</span>
+                  <span class="meter-value">92%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 92%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Bash</span>
+                  <span class="meter-value">90%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 90%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Plataformas &amp; datos</h3>
+            <ul class="meters" role="list">
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Odoo</span>
+                  <span class="meter-value">98%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 98%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Dynamics NAV</span>
+                  <span class="meter-value">85%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 85%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>PostgreSQL</span>
+                  <span class="meter-value">92%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 92%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>APIs / integraciones</span>
+                  <span class="meter-value">93%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 93%"></div>
+                </div>
+              </li>
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Docker</span>
+                  <span class="meter-value">92%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 92%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group skill-group-wide">
             <h3>Liderazgo</h3>
-            <p>Dirección de equipos, gestión de proyectos y recursos, formación de personal.</p>
-          </article>
-          <article>
-            <h3>Operación</h3>
-            <p>Infraestructura, seguridad, soporte técnico y evolución tecnológica continua.</p>
-          </article>
+            <ul class="meters" role="list">
+              <li class="meter">
+                <div class="meter-top">
+                  <span>Gestión de proyectos y liderazgo técnico</span>
+                  <span class="meter-value">95%</span>
+                </div>
+                <div class="meter-track" aria-hidden="true">
+                  <div class="meter-fill" style="--level: 95%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div class="lang-row" aria-label="Idiomas">
           <div>
             <span class="fact-label">Español</span>
@@ -458,6 +560,27 @@
 
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const metersRoot = document.querySelector("[data-skill-meters]");
+      if (metersRoot) {
+        const reveal = () => metersRoot.classList.add("is-animated");
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  reveal();
+                  observer.disconnect();
+                }
+              });
+            },
+            { threshold: 0.25 }
+          );
+          observer.observe(metersRoot);
+        } else {
+          reveal();
+        }
+      }
     </script>
   </body>
 </html>

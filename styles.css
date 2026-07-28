@@ -451,6 +451,102 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.skill-group {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.skill-group-wide {
+  grid-column: 1 / -1;
+}
+
+.skill-group h3 {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.meters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.05rem;
+}
+
+.meter-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.meter-value {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.meter-track {
+  height: 0.42rem;
+  border-radius: 999px;
+  background: rgba(232, 241, 244, 0.08);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(232, 241, 244, 0.06);
+}
+
+.meter-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #1f9f82 0%, var(--accent) 55%, #7ee7c8 100%);
+  box-shadow: 0 0 18px rgba(47, 210, 168, 0.35);
+  transform-origin: left center;
+  transition: width 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-groups.is-animated .meter-fill {
+  width: var(--level);
+}
+
+.skill-groups.is-animated .meter:nth-child(1) .meter-fill {
+  transition-delay: 0.05s;
+}
+.skill-groups.is-animated .meter:nth-child(2) .meter-fill {
+  transition-delay: 0.12s;
+}
+.skill-groups.is-animated .meter:nth-child(3) .meter-fill {
+  transition-delay: 0.19s;
+}
+.skill-groups.is-animated .meter:nth-child(4) .meter-fill {
+  transition-delay: 0.26s;
+}
+.skill-groups.is-animated .meter:nth-child(5) .meter-fill {
+  transition-delay: 0.33s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meter-fill {
+    transition: none !important;
+  }
+
+  .skill-groups .meter-fill {
+    width: var(--level);
+  }
+}
+
 .projects {
   display: grid;
   gap: 0;
@@ -615,6 +711,7 @@ h1 {
 @media (max-width: 860px) {
   .profile-grid,
   .skills,
+  .skill-groups,
   .job,
   .lang-row {
     grid-template-columns: 1fr;
