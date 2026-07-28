@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Héctor Garrido · hgarridoco</title>
+    <meta
+      name="description"
+      content="Sitio personal de Héctor Garrido Colmenarejo — ingeniería de software en TECNIC."
+    />
+    <meta name="theme-color" content="#0b1c24" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="grid"></div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="/">hgarridoco</a>
+      <nav aria-label="Principal">
+        <a href="https://github.com/hgarridoco" rel="noopener noreferrer">GitHub</a>
+        <a href="https://tecnic.eu" rel="noopener noreferrer">TECNIC</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">GitHub Pages · Madrid</p>
+        <h1>Héctor Garrido</h1>
+        <p class="lede">
+          Software, sistemas y producto en
+          <a href="https://tecnic.eu" rel="noopener noreferrer">TECNIC</a>.
+          Este espacio es mi página personal en GitHub.
+        </p>
+        <div class="cta">
+          <a class="button primary" href="https://github.com/hgarridoco" rel="noopener noreferrer"
+            >Ver perfil</a
+          >
+          <a class="button ghost" href="mailto:hector.garrido@tecnic.eu">Contacto</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Héctor Garrido Colmenarejo</span>
+      <a href="https://hgarridoco.github.io">hgarridoco.github.io</a>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
