@@ -28,7 +28,7 @@
       <a class="brand" href="/">
         <img
           class="brand-photo"
-          src="assets/hector.jpg"
+          src="assets/hector-sm.jpg"
           alt=""
           width="36"
           height="36"
@@ -61,13 +61,16 @@
           </div>
         </div>
         <figure class="hero-portrait">
-          <img
-            src="assets/hector.jpg"
-            alt="Retrato de Héctor Garrido Colmenarejo"
-            width="800"
-            height="800"
-            fetchpriority="high"
-          />
+          <picture>
+            <source srcset="assets/hector.webp" type="image/webp" />
+            <img
+              src="assets/hector.jpg"
+              alt="Retrato de Héctor Garrido Colmenarejo"
+              width="1800"
+              height="1800"
+              fetchpriority="high"
+            />
+          </picture>
         </figure>
       </section>
 
@@ -82,35 +85,24 @@
           </p>
         </div>
         <div class="profile-grid">
-          <div class="profile-main">
-            <figure class="profile-portrait">
-              <img
-                src="assets/hector.jpg"
-                alt="Héctor Garrido Colmenarejo"
-                width="320"
-                height="320"
-                loading="lazy"
-              />
-            </figure>
-            <div class="profile-copy">
-              <article class="profile-block">
-                <h3>Enfoque</h3>
-                <p>
-                  Resolver problemas complejos, diseñar soluciones escalables e integrar
-                  tecnología en procesos de negocio. Experiencia dirigiendo equipos técnicos,
-                  estrategia tecnológica e I+D, con responsabilidad sobre infraestructura,
-                  seguridad, servidores y evolución tecnológica.
-                </p>
-              </article>
-              <article class="profile-block">
-                <h3>Modalidad</h3>
-                <p>
-                  Trayectoria con fuerte componente remoto en Aselcis, GARCO, Ideas Positivas y
-                  TECNIC: liderazgo distribuido, entrega continua y cercanía con negocio sin
-                  depender de la presencialidad.
-                </p>
-              </article>
-            </div>
+          <div class="profile-copy">
+            <article class="profile-block">
+              <h3>Enfoque</h3>
+              <p>
+                Resolver problemas complejos, diseñar soluciones escalables e integrar
+                tecnología en procesos de negocio. Experiencia dirigiendo equipos técnicos,
+                estrategia tecnológica e I+D, con responsabilidad sobre infraestructura,
+                seguridad, servidores y evolución tecnológica.
+              </p>
+            </article>
+            <article class="profile-block">
+              <h3>Modalidad</h3>
+              <p>
+                Trayectoria con fuerte componente remoto en Aselcis, GARCO, Ideas Positivas y
+                TECNIC: liderazgo distribuido, entrega continua y cercanía con negocio sin
+                depender de la presencialidad.
+              </p>
+            </article>
           </div>
           <aside class="facts" aria-label="Datos clave">
             <div>
